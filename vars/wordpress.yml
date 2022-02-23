@@ -1,6 +1,6 @@
 ---
-server_name: "psvpro.tk" # тут ваш домен
-mysql_db: "wordpress"
+server_name: "web.maxus.lan" 
+mysql_db: "wordpress" 
 mysql_user: "wordpress"
 mysql_password: "WordpreSS0!"
 
@@ -65,3 +65,4 @@ mysql_users:
     host: "%"
     password: "{{ mysql_password }}"
     priv: "wordpress.*:ALL"
+
