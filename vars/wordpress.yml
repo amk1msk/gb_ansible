@@ -66,4 +66,3 @@ mysql_users:
     password: "{{ mysql_password }}"
     priv: "wordpress.*:ALL"
 
-
