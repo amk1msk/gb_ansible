@@ -14,14 +14,4 @@
     src: "{{ role_path }}/templates/nginx.conf.j2"
     dest: "/etc/nginx/nginx.conf"
 
-- name: Exec URI
-  hosts: nginx
-  uri:
-    url: "http://localhost:{{ nginx_port | default(8080) }}"
-    user: "app_user"
-    password: "app_password"
-    method: POST
-    force_basic_auth: true
-    status_code: 501
-
 

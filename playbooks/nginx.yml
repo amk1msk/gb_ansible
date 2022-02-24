@@ -1,10 +1,5 @@
 ---
 - name: Install nginx package
-  package:
-    name: nginx
-    state: installed
+  hosts: nginx
+  roles: nginx
 
-- name: Upload rendered nginx.conf
-  template:
-    src: "{{ role_path }}/templates/nginx.conf.j2"
-    dest: "/etc/nginx/nginx.conf"
