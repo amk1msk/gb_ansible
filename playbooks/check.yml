@@ -2,9 +2,15 @@
   command: systemctl status nginx
   register: nginx_status
 
+- debug:
+    var: nginx_status
+
 - name: Check Mysql
   command: systemctl status mysql
   register: mysql_status
+
+- debug:
+    var: mysql_status
 
 - name: Download file
   get_url:
