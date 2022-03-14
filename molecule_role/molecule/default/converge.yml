@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include acme.molecule_role"
+      include_role:
+        name: "acme.molecule_role"
