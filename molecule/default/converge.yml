@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include /home/akalinin/gb_ansible/external_roles/geerlingguy.nginx/"
+      include_role:
+        name: "/home/akalinin/gb_ansible/external_roles/geerlingguy.nginx/"

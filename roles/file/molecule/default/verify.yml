@@ -1,0 +1,16 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+  - name: Find file
+    find:
+      paths: /etc/directory/date.file
+    register: output
+  - name: Check file
+    assert:
+      that: output.matched
+      fail_msg: "File not found"
+      success_msg: "File found"
